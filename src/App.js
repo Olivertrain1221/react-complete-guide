@@ -3,7 +3,7 @@ function App() {
   return (
     <div>
       <div>
-        <h2>TEST</h2>
+        <h2></h2>
       </div>
       <ExpenseItem></ExpenseItem>
     </div>
