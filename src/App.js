@@ -30,7 +30,7 @@ function App() {
   return React.createElement('div',
    {},
    React.createElement('h2', {}, "Lets's Get Started"),
-   React.createElement(Expenses, {items: expenses}))
+ 
   // return (
   //   <div>
   //     <div>
