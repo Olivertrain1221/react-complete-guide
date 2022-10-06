@@ -1,7 +1,8 @@
 import './ExpenseDate.css';
+import React from 'react';
 
 function ExpenseDate(props) {
-    {/* LocaleString is used to make date Human readable, set the language and chosen output, long/short */}
+    // {/* LocaleString is used to make date Human readable, set the language and chosen output, long/short */}
     const month = props.date.toLocaleString('en-US', {month: 'long'});
     const year = props.date.getFullYear();
     const day = props.date.toLocaleString('en-US', {day: '2-digit'});

@@ -1,8 +1,16 @@
 import React from 'react';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
-  
+// A arrow function is now preffered method to writing a function
+// Normal = function App() {
+//      BLAR BLAR BLAR
+// }
+// Arrow = const App = () => {
+//      BLAR BLAR BLAR
+// }
+
+
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -25,19 +33,20 @@ function App() {
     },
   ];
 
-  // creates the element says what the element is 'div' and then nothing to pass so empty array {}//
-
-  return React.createElement('div',
-   {},
-   React.createElement('h2', {}, "Lets's Get Started"),
- 
-  // return (
-  //   <div>
-  //     <div>
-  //       <Expenses items={expenses}/>
-  //     </div>
-  //   </div>
-  // );
+  return (
+    <div>
+      <div>
+        <Expenses items={expenses}/>
+      </div>
+    </div>
+  );
 }
 
 export default App;
+
+  // React.createElement('div',
+  //  {},
+  //  React.createElement('h2', {}, "Lets's Get Started"),
+  //  React.createElement(Expenses, { items: expenses })
+  // );
+  // creates the element says what the element is 'div' and then nothing to pass so empty array {}//
