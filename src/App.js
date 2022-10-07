@@ -9,7 +9,7 @@ import Expenses from './components/Expenses/Expenses';
 //      BLAR BLAR BLAR
 // }
 
-
+  
 const App = () => {
   const expenses = [
     {
