@@ -1,6 +1,6 @@
 import React from 'react';
 import Expenses from './components/Expenses/Expenses';
-
+import NewExpense from './components/NewExpense/NewExpense';
 // A arrow function is now preffered method to writing a function
 // Normal = function App() {
 //      BLAR BLAR BLAR
@@ -35,9 +35,8 @@ const App = () => {
 
   return (
     <div>
-      <div>
+        <NewExpense />
         <Expenses items={expenses}/>
-      </div>
     </div>
   );
 }

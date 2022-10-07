@@ -12,7 +12,7 @@ function ExpenseItem(props) {
   // Click handler
   const changeTitle = () => {
     setTitle('updated');
-    console.log(title)
+    console.log(title);
   }
 
   return (
