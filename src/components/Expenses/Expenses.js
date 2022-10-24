@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ExpenseItem from './ExpenseItem';
+import ExpensesList from './ExpensesList';
 import Card from '../UI/Card';
 import './Expenses.css';
 import ExpensesFilter from './ExpensesFilter';
@@ -14,24 +14,19 @@ function Expenses(props) {
   const filteredExpenses = props.items.filter(expense => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
+  
+// Setting a default value below and unless the array has length more than 0 replace the "expensesContent" with below.
 
   return (
     <div>
       <Card className="expenses">
-        <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-        {/* Start of looping over an array of values appose to increasig via index */}
-        {/* Always add a key to a list that is being iterated over */}
-        {filteredExpenses.map((expense) => (
-          <ExpenseItem
-            key={expense.id} 
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date} 
-            />
-          ))}
+        <ExpensesFilter 
+          selected={filteredYear}
+          onChangeFilter={filterChangeHandler} 
+          />
+        <ExpensesList items={filteredExpenses}/>
       </Card>
     </div>
-
   );
 }
 

@@ -10,15 +10,17 @@ function ExpenseItem(props) {
 
   // Click handler
   return (
-    <Card className='expense-item'>
-      <ExpenseDate date={props.date} />
-      <div className='expense-item__description'>
-        <h2>{props.title}</h2>
-        <p></p>
-        <div className='expense-item__price test'>${props.amount}</div>
-      </div>
-      {/* THESE ARE PROPS THE EVENT LISTNER ON THE HTML?JSX on click runs variable which is a function effectively */}
-    </Card>
+    <li>
+      <Card className='expense-item'>
+        <ExpenseDate date={props.date} />
+        <div className='expense-item__description'>
+          <h2>{props.title}</h2>
+          <p></p>
+          <div className='expense-item__price test'>${props.amount}</div>
+        </div>
+        {/* THESE ARE PROPS THE EVENT LISTNER ON THE HTML?JSX on click runs variable which is a function effectively */}
+      </Card>
+    </li>
   );
 }
 
